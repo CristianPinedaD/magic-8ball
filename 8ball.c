@@ -5,6 +5,7 @@
 char *determineAnswer(int);
 int calculateRandom();
 void pressAnyKeyToContinue();
+void ending();
 
 const char *positiveResponses[10] = {
 	"It is certain",	 "It is decidedly so", "Without a doubt",
