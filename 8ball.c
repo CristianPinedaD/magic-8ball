@@ -63,6 +63,8 @@ int main(void) {
 		printf("Would you like to ask the 8-ball another question? (1 = Y  2 = "
 			   "N): ");
 		scanf("%d", &tryAgain);
+
+		system("clear");
 	}
 
 	puts("You attempt to put down the 8-ball, but as you do it, you drop it and it shatters over your brand-new floor. Great job.");
@@ -91,6 +93,5 @@ char *determineAnswer(int randomNumber) {
 
 void pressAnyKeyToContinue(){
 	printf("\033[90mPress any key to continue...\033[0m");
-	getchar();
 	getchar();
 }
