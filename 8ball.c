@@ -27,9 +27,14 @@ int main(void) {
 	puts("You pick up the magic 8-ball, eager to learn those secrets about "
 		 "life that are only answered with a boolean expression.");
 
+	getchar();
+
 	while (tryAgain == 1) {
 
 		puts("You look at the magic 8-ball and ask it a yes/no question: ");
+
+		getchar();
+
 		printf("You ask the 8-ball: ");
 
 		char question[500];
@@ -40,15 +45,21 @@ int main(void) {
 
 		puts("You shake the 8-ball. You see the murky water sloshing inside it "
 			 "through its round window.");
+		getchar();
 		puts("Then, a brief moment of stillness is interrupted by the 8-ball's "
 			 "answer, floating through the water.");
+		getchar();
 		puts("The 8-ball proclaims its answer:");
-		printf("%s\n", answer);
+		printf("%s", answer);
 
-		printf("Would you like to ask the 8-ball another question? (1 = Y/2 = "
+		getchar();
+
+		printf("Would you like to ask the 8-ball another question? (1 = Y  2 = "
 			   "N): ");
 		scanf("%d", &tryAgain);
 	}
+
+	puts("You attempt to put down the 8-ball, but as you do it, you drop it and it shatters over your brand-new floor. Great job.");
 }
 
 int calculateRandom() {
