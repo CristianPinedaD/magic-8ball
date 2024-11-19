@@ -4,6 +4,7 @@
 
 char *determineAnswer(int);
 int calculateRandom();
+void pressAnyKeyToContinue();
 
 const char *positiveResponses[10] = {
 	"It is certain",	 "It is decidedly so", "Without a doubt",
@@ -27,13 +28,13 @@ int main(void) {
 	puts("You pick up the magic 8-ball, eager to learn those secrets about "
 		 "life that are only answered with a boolean expression.");
 
-	getchar();
+	pressAnyKeyToContinue();
 
 	while (tryAgain == 1) {
 
 		puts("You look at the magic 8-ball and ask it a yes/no question: ");
 
-		getchar();
+		pressAnyKeyToContinue();
 
 		printf("You ask the 8-ball: ");
 
@@ -45,14 +46,19 @@ int main(void) {
 
 		puts("You shake the 8-ball. You see the murky water sloshing inside it "
 			 "through its round window.");
-		getchar();
+
+		pressAnyKeyToContinue();
+
 		puts("Then, a brief moment of stillness is interrupted by the 8-ball's "
 			 "answer, floating through the water.");
-		getchar();
+
+		pressAnyKeyToContinue();
+
 		puts("The 8-ball proclaims its answer:");
 		printf("%s", answer);
+		puts("");
 
-		getchar();
+		pressAnyKeyToContinue();
 
 		printf("Would you like to ask the 8-ball another question? (1 = Y  2 = "
 			   "N): ");
@@ -81,4 +87,10 @@ char *determineAnswer(int randomNumber) {
 	} else { // Positive responses
 		return positiveResponses[10 - randomNumber];
 	}
+}
+
+void pressAnyKeyToContinue(){
+	printf("\033[90mPress any key to continue...\033[0m");
+	getchar();
+	getchar();
 }
