@@ -73,9 +73,7 @@ int main(void) {
 
 		puts("You look at the magic 8-ball and ask it a yes/no question: ");
 
-		pressAnyKeyToContinue();
-
-		printf("You ask the 8-ball: ");
+		printf("\nYou ask the 8-ball: ");
 
 		char question[500];
 		fgets(question, sizeof(question), stdin);
