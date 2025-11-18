@@ -70,6 +70,8 @@ int main(void) {
 	pressAnyKeyToContinue();
 
 	while (tryAgain == 1) {
+	
+	    srand(time(0)); 
 
 		puts("You look at the magic 8-ball and ask it a yes/no question: ");
 
